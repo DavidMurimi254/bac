@@ -14,7 +14,7 @@ let conct = mysql.createConnection({
     user: process.env.USER,
     password: process.env.PASSWORD,
     database: process.env.DATABASE_NAME,
-    ssl: { ca: process.env.MYSQL_CA_CERT ? "set" : "missing"}
+    ssl: { ca: process.env.MYSQL_CA_CERT }
 })
 
 //CONNECTING TO DATABASE
