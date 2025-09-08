@@ -1,7 +1,5 @@
 const express = require('express')
 const mysql = require('mysql2')
-const fs = require('fs')
-const { connect } = require('http2')
 require('dotenv').config()
 const app = express()
 
@@ -37,11 +35,12 @@ conct.query(`
 
 //EXTRACTING ALL DATA
 app.get('/', (req, res) => {
-    res.json(tasks)
+    
 
     conct.query("SELECT * FROM tasks", (err, result) => {
         if(err) throw err
         console.log(result);
+        res.json(result)
     })
 })
 
