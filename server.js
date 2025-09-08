@@ -35,8 +35,6 @@ conct.query(`
 
 //EXTRACTING ALL DATA
 app.get('/api/tasks', (req, res) => {
-    
-
     conct.query("SELECT * FROM tasks", (err, result) => {
         if(err) throw err
         console.log(result);
