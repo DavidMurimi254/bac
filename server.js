@@ -58,3 +58,5 @@ app.post('/api/tasks', (req, res) => {
         })
     })
 })
+
+module.exports = app
