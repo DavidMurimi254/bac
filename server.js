@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     let todo = req.body.tasks
 
-    const sql = "INSERT INTO tasks (name) VALUES (?)";
+    const sql = "INSERT INTO tasks (tasks) VALUES (?)";
     conct.query(sql, [todo], (err) => {
         if(err) throw err
 
