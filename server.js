@@ -34,7 +34,7 @@ conct.query(`
 })
 
 //EXTRACTING ALL DATA
-app.get('/', (req, res) => {
+app.get('/api/tasks', (req, res) => {
     
 
     conct.query("SELECT * FROM tasks", (err, result) => {
@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
 })
 
 //INSERTING AND DISPLAYING THE SAVED DATA
-app.post('/', (req, res) => {
+app.post('/api/tasks', (req, res) => {
     let todo = req.body.tasks
 
     const sql = "INSERT INTO tasks (tasks) VALUES (?)";
