@@ -58,7 +58,3 @@ app.post('/api/tasks', (req, res) => {
         })
     })
 })
-
-app.listen(5000, () => {
-    console.log("Server running at port 5000")
-})
