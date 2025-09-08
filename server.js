@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 //PROVIDING CREDENTIALS FOR YOUR DATABASE
-let conct = mysql.createPool({
+let conct = mysql.createConnection({
     host: process.env.HOST,
     port: process.env.PORT,
     user: process.env.USER,
