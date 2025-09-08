@@ -1,4 +1,4 @@
-axios.get('https://bac-lemon.vercel.app/api/tasks')
+axios.get('/api/tasks')
 .then(res => {
     const data = res.data
 })
@@ -15,7 +15,7 @@ function inject() {
     const task = product.value
     if (!task.trim()) return
 
-    axios.post('https://bac-lemon.vercel.app/api/tasks', {tasks: task})
+    axios.post('/api/tasks', {tasks: task})
    .then(res => {
 
     res.data.forEach(item => {
