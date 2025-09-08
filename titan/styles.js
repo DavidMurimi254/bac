@@ -1,4 +1,4 @@
-axios.get('/api/tasks')
+axios.get('/tasks')
 .then(res => {
     const data = res.data
 })
@@ -15,7 +15,7 @@ function inject() {
     const task = product.value
     if (!task.trim()) return
 
-    axios.post('/api/tasks', {tasks: task})
+    axios.post('/tasks', {tasks: task})
    .then(res => {
 
     res.data.forEach(item => {
