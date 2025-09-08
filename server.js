@@ -49,7 +49,7 @@ app.post('/api/tasks', (req, res) => {
     const sql = "INSERT INTO tasks (tasks) VALUES (?)";
     conct.query(sql, [todo], (err) => {
         if(err) throw err
-
+ 
         conct.query("SELECT * FROM tasks", (err, result) => {
             if(err) throw err
             res.json(result)

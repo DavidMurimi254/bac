@@ -20,7 +20,7 @@ function inject() {
 
     res.data.forEach(item => {
         const newP = document.createElement('p')
-        newP.textContent = item.name
+        newP.textContent = item.tasks
         giant.appendChild(newP)
         console.log(item)
     })
